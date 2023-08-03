@@ -2,6 +2,7 @@
 @section('dis-his', 'active')
 @section('content')
     <label class="progress-bar bg-info" role="progressbar">Transection History</label>
+    <a href="{{ url('/genareReportDisHistory')}}" title="Report"> <button class="p-3 mb-2 bg-success text-white"> Generate Report</button></a>
     <table class="table">
         <thead class="thead-dark">
         <tr>

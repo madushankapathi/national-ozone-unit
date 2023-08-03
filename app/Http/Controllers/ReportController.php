@@ -39,4 +39,10 @@ class ReportController extends Controller
         $pdf = Pdf::loadView('pdf.gasRepo' ,['gas' => $gas]);
         return $pdf->download('Gas Details Report.pdf');
     }
+    public function genareReportDisHistory(){
+        $gas = Gas::all();
+        //return view('admin.adminGasDe')->with('gas', $gas);
+        $pdf = Pdf::loadView('pdf.gasRepo' ,['gas' => $gas]);
+        return $pdf->download('Gas Details Report.pdf');
+    }
 }

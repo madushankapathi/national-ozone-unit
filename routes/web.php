@@ -97,6 +97,7 @@ Route::match( ['put', 'patch'], '/updateTrans/{id}'  ,[GasControlle::class,'upda
 Route::get('/genareReport' ,[ReportController::class,'viewUserRepo']);
 Route::get('/genareReportGasTrans' ,[ReportController::class,'genareReportGasTrans']);
 Route::get('/gasDetailsRepo' ,[ReportController::class,'gasDetailsRepo']);
+Route::get('/genareReportDisHistory' ,[ReportController::class,'genareReportDisHistory']);
 
 //report end
 

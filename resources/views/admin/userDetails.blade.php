@@ -40,5 +40,6 @@
         </tbody>
     </table>
     <a href="{{ url('/genareReport')}}" title="Report"> <button class="p-3 mb-2 bg-success text-white"> Generate Report</button></a>
+
 @endsection
 

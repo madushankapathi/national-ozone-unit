@@ -89,6 +89,7 @@ class GasControlle extends Controller
         $distr->save();
 
         $resultsG = GasAdd::where('disId', $disId)
+            ->where('gasId', $gasId )
             ->get();
         $aGasI = $resultsG[0]->id;
         $avaiQ = $resultsG[0]->qty;
@@ -96,7 +97,7 @@ class GasControlle extends Controller
         $gasDisUp = GasAdd::findOrFail($aGasI);
         $gasDisUp->qty = $upQ;
         $gasDisUp->save();
-        return redirect()->back()->with('success', 'Gas add successfully!');
+        return redirect()->back();
 
 
 //        $name = $request->input('name');
