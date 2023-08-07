@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('import_req', function (Blueprint $table) {
             $table->id();
             $table->string('impoId');
-            $table->string('req');
-            $table->string('status');
-            $table->string('fileUpath');
+            $table->string('reqdate');
+            $table->string('gasName');
+            $table->string('qty');
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

@@ -29,8 +29,8 @@ class HomeController extends Controller
                 return view('techni.techdashboard',['gasD' => $gasD, 'gasN' => $gasN,'disN' => $disN]);
 
             }elseif($usert=='importer'){
-
-                return view('importer.impodashboard');
+                $gasN = Gas::all();
+                return view('importer.impodashboard',['gasN' => $gasN]);
 
             }elseif($usert=='distributor'){
                 $gasN = Gas::all();

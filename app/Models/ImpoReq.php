@@ -13,8 +13,9 @@ class ImpoReq extends Model
     protected $fillable = [
         'id',
         'impoId',
-        'req',
+        'reqDate',
+        'gasName',
+        'qty',
         'status',
-        'fileUpath',
     ];
 }

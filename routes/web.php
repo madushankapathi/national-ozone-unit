@@ -5,6 +5,7 @@ use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GasControlle;
+use App\Http\Controllers\impoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,21 +50,16 @@ Route::get('/addgasname'  ,[GasControlle::class,'addGas']);
 
 Route::get('/adminGasDe'  ,[GasControlle::class,'viewGas']);
 
-Route::get('/adminImport', function () {
-    return view('admin.adminImport');
-});
+Route::get('/adminImport',[impoController::class,'viewReq']);
+
 Route::get('/adminGasTrans', [GasControlle::class,'adminVewGT']);
 
 //Route::view('/show-report', 'report');
 //Route::post('/generate-report', [ReportController::class, 'generateReport']);
 
+Route::get('/reqedit{data}' ,[impoController::class,'editReq']);
 
-
-Route::get('/technicianStock', [GasControlle::class,'adminVewTS']);
-
-Route::get('/distributorStock', [GasControlle::class,'adminVewDS']);
-
-
+Route::match( ['put', 'patch'], '/requpdate/{id}'  ,[impoController::class,'updateReq']);
 //Route::get('/adminGasDe', function () {
 //    return view('admin.adminGasDe');
 //});
@@ -93,11 +89,19 @@ Route::match( ['put', 'patch'], '/updateTrans/{id}'  ,[GasControlle::class,'upda
 
 //tech root end
 
+//impo root start
+Route::get('/impoReq'  ,[impoController::class,'createReq']);
+
+Route::get('/impoHis'  ,[impoController::class,'hisReq']);
+
+//impo root end
+
 //report start
 Route::get('/genareReport' ,[ReportController::class,'viewUserRepo']);
 Route::get('/genareReportGasTrans' ,[ReportController::class,'genareReportGasTrans']);
 Route::get('/gasDetailsRepo' ,[ReportController::class,'gasDetailsRepo']);
 Route::get('/genareReportDisHistory' ,[ReportController::class,'genareReportDisHistory']);
+Route::get('/gasreqRepo' ,[ReportController::class,'gasreqRepo']);
 
 //report end
 

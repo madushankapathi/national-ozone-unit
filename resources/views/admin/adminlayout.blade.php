@@ -61,7 +61,7 @@
             margin-left: 200px;
             padding: 1px 16px;
             height: 1000px;
-            margin-top: -400px;
+            margin-top: -280px;
         }
 
         /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -94,8 +94,6 @@
     <a class="@yield('user-import')" href="{{ url('/adminImport') }}">Import</a>
     <a class="@yield('user-gasTrans')" href="{{ url('/adminGasTrans') }}">Gas transaction</a>
     <a class="@yield('user-gasDe')" href="{{ url('/adminGasDe') }}">Gas details</a>
-    <a class="@yield('user-tS')" href="{{ url('/technicianStock') }}">Technician stock</a>
-    <a class="@yield('user-dS')" href="{{ url('/distributorStock') }}">Distributor stock</a>
 </div>
 
 <!-- Page content -->

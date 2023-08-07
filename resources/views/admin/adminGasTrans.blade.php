@@ -2,7 +2,7 @@
 @section('user-gasTrans', 'active')
 @section('content')
     <label class="progress-bar bg-info" role="progressbar">Gas Transection</label>
-
+    <a href="{{ url('/genareReportGasTrans')}}" title="Report"> <button class="p-3 mb-2 bg-success text-white"> Generate Report</button></a>
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -46,5 +46,5 @@
         @endforeach
         </tbody>
     </table>
-    <a href="{{ url('/genareReportGasTrans')}}" title="Report"> <button class="p-3 mb-2 bg-success text-white"> Generate Report</button></a>
+
 @endsection

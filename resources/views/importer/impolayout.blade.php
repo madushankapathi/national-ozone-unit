@@ -77,8 +77,8 @@
     </head>
     <body>
     <div class="sidebar">
-        <a class="active" href="#ur">Import request</a>
-        <a href="#ud">Import history</a>
+        <a class="@yield('impo-req')" href="{{ url('/home') }}">New Import Request</a>
+        <a class="@yield('impo-his')" href="{{ url('/impoHis') }}">Import Request history</a>
     </div>
 
     <!-- Page content -->

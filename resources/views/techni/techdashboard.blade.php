@@ -2,6 +2,7 @@
 @section('Tech-Req', 'active')
 @section('content')
     <label class="progress-bar bg-info" role="progressbar">Gas Distribute Request</label>
+    <a href="{{ url('/gasreqRepo')}}" title="Report"> <button class="p-3 mb-2 bg-success text-white"> Generate Report</button></a>
     <table class="table">
         <thead class="thead-dark">
         <tr>
