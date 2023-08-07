@@ -13,10 +13,10 @@
     <tbody>
             @foreach($userD as $item)
                 <tr>
-                    <td>{{ $item->id }}</td>
+                    {{--<td>{{ $item->id }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->email }}</td>
-                    <td>{{ $item->userType }}</td>
+                    <td>{{ $item->userType }}</td>--}}
                 </tr>
             @endforeach
     </tbody>
